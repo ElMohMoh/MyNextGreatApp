@@ -48,3 +48,85 @@ refer to http://docs.nativescript.org/ui/theme.
     color: #a17201;
     margin: 0;
 }
+
+.break-row{
+    padding: 12;
+    background-color: #FFFBF0;
+}
+
+.list-view-row{
+    padding: 12 12 12 0;
+}
+
+.speaker-image{
+    horizontal-align: left;
+    vertical-align: top;
+    margin-right: 12;
+}
+
+.more-button {
+    margin: 6 0;
+    font-size: 14;
+    color: #05303F;
+    horizontal-align: left;
+    background-color: white;
+}
+
+.favourite-wrap {
+    horizontal-align: left;
+    vertical-align: top;
+    padding: 12;
+    margin-right: 16;
+}
+
+.session-page-title {
+    font-size: 17;
+    color: #fac950;
+}
+
+.session-page-subtitle {
+    font-size: 12;
+    color: #f7db94;
+    font-weight: bold;
+}
+
+.section-header {
+    margin-top: 6;
+    color: #A17201;
+}
+
+.horizontal-line{
+    height: 1;
+    background-color: #fac950;
+    vertical-align: center;
+    margin: 12 0 8 0;
+}
+
+.speaker-row{
+    padding-top: 12;
+}
+
+.content {
+    margin: 12;
+}
+
+.content-offset{
+    padding: 12;
+    background-color: #ffffff;
+}
+
+.info {
+    font-size: 14;
+    color: #555555;
+}
+
+.info-bigger {
+    color: #555555;
+    font-size: 17;
+    margin: 0;
+}
+
+.description {
+    font-size: 14;
+    color: #555555;
+}

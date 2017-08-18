@@ -5,7 +5,7 @@ export interface ConferenceDay{
 }
 
 export interface Speaker{
-    id: string;
+    id: number;
     name: string;
     title: string;
     compagny: string;
@@ -21,7 +21,7 @@ export interface RoomInfo {
 }
 
 export interface Session {
-    id: string;
+    id: number;
     title: string;
     start: string;
     end: string;

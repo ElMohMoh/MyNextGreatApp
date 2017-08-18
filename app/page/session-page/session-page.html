@@ -1,0 +1,55 @@
+<GridLayout rows="auto,*" class="page-content">
+    <GridLayout columns="auto, *" rows="auto, auto" class="page-header">
+        <GridLayout row="1" visibility="{{session.break ? 'collapsed': 'visible'}}"
+            (tap)="toggleFavorite()" columns="auto" class="favourite-wrap"
+            horizontalAlignment="left">
+
+            <Image id="imgFav" stretch="none" class="icon-image" src="{{ session.favorite ? 'res://ic_add_to_fav_1' : 'res://ic_add_to_fav'}}"></Image>
+
+        </GridLayout>
+
+        <StackLayout margin="16 16 16 0" row="1" col="1">
+            <Label [text]="session.title" textWrap="true" class="session-page-title"></Label>
+            <Label [text]="range + ' ' + session.room" textWrap="true" class="session-page-subtitle"></Label>
+        </StackLayout>
+
+    </GridLayout>
+    <!-- Content-->
+    <ScrollView #scroll row="1" id="scroll">
+        <GridLayout row="1" rows="auto, auto, auto, auto, *" columns="56, *" class="content">
+            <!-- Description -->
+            <Label class="descritpion" textWrap="true" col="1" id="txtDescription" [text]="description"></Label>
+
+            <!-- Button -->
+            <Button text="MORE" (tap)="toggleDescription($event)" class="more-button" row="1" col="1"></Button>
+            
+            <!-- Line -->
+            <StackLayout class="horizontal-line" row="2" col="1" margin="0 0 0 0"></StackLayout>
+
+            <Label text="SPEAKERS" class="section-header" row="3" col="1"></Label>
+            
+            <ListView id="speakers-list" [items]="session.speakers" row="4" colSpan="2"
+                height="{{session.speakers.length * 72 + 46 }}"  selectedBackgroundColor="#fac950" separatorColor="#FFFFFF">
+                <ng-template let-speaker>
+                    <GridLayout columns="56, *" class="speaker-row">
+                        <!--Image src="speaker.picture" class="speaker-image" stretch="aspectFit" rowSpan="2"></Image-->
+
+                        <StackLayout col="1" >
+                            <StackLayout orientation="horizontal">
+                                <Label [text]="speaker.name" class="info bold" ></Label>
+                                <Label [text]="speaker.twitterName ? ' (' + speaker.twitterName + ')' : ''" class="info" style="color: #A17201;" ></Label>
+                            </StackLayout>
+            
+                            <Label [text]="speaker.title" class="info" textWrap="true" style="font-style: italic;"></Label>
+                        </StackLayout>
+
+                    </GridLayout>
+                </ng-template>
+            </ListView>
+
+        </GridLayout>
+
+    </ScrollView>
+
+
+</GridLayout>

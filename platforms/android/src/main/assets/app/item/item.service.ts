@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 
 import { Item } from "./item";
-import { Session } from "../shared/interfaces";
+import { Session, Speaker } from "../shared/interfaces";
 
 @Injectable()
 export class ItemService {
@@ -30,9 +30,28 @@ export class ItemService {
         { id: 25, name: "Masip", role: "Goalkeeper" },
     );
 
+    private speakers = new Array<Speaker>(
+        {
+            id: 1,
+            name: 'Stephen Metz',
+            title: 'Customer Mobility Technician',
+            compagny: 'compagny',
+            picture: undefined,
+            twitterName: '@Stephen_Metz'
+        },
+        {
+            id: 2,
+            name: 'Jayce Mayer',
+            title: 'Senior Communications Manager',
+            compagny: 'compagny',
+            picture: undefined,
+            twitterName: '@Jayce57'
+        }
+    );
+
     private sessions = new Array<Session>(
         {
-            id: '1',
+            id: 1,
             title: 'session 1',
             start: '2016-10-03T12:00:00Z',
             end: '2016-10-03T13:00:00Z',
@@ -43,26 +62,26 @@ export class ItemService {
                 url: '',
                 theme: ''
             },
-            speakers: [],
-            description: 'session 1 desc',
-            descriptionShort: 'session 1 short desc',
+            speakers: this.speakers,
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum ante aliquet, molestie dui et, semper dui. Nunc aliquam vestibulum imperdiet. Donec sit amet dui posuere.',
+            descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent int...',
             calendarEventId: '',
             isBreak: false,
             favorite: false
         },
         {
-            id: '2',
+            id: 2,
             title: 'session 2',
             start: '2016-10-03T13:00:00Z',
             end: '2016-10-03T14:00:00Z',
-            room: 'room 2',
+            room: undefined,
             roomInfo: {
                 roomId:'room2',
                 name: 'myroom2',
                 url: '',
                 theme: ''
             },
-            speakers: [],
+            speakers: this.speakers,
             description: 'session 2 desc',
             descriptionShort: 'session 2 short desc',
             calendarEventId: '',
@@ -70,7 +89,7 @@ export class ItemService {
             favorite: false
         },
         {
-            id: '3',
+            id: 3,
             title: 'session 3',
             start: '2016-10-03T14:00:00Z',
             end: '2016-10-03T15:00:00Z',
@@ -81,7 +100,7 @@ export class ItemService {
                 url: '',
                 theme: ''
             },
-            speakers: [],
+            speakers: this.speakers,
             description: 'session 3 desc',
             descriptionShort: 'session 3 short desc',
             calendarEventId: '',
@@ -100,5 +119,9 @@ export class ItemService {
 
     getSessions(): Session[]{
         return this.sessions;
+    }
+
+    getSession(id: number): Session {
+        return this.sessions.filter(session => session.id === id)[0];
     }
 }
