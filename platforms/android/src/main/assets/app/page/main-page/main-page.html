@@ -1,0 +1,31 @@
+<GridLayout rows="auto, *">
+
+    <StackLayout class="page-header" row="0">
+        <Label text="Header" class="page-title bold"
+             horizontalAlignment="center"
+              margin="15">
+        </Label>
+    </StackLayout>
+    
+    <GridLayout rows="*" row="1">
+        <ListView [items]="myItems">
+            <ng-template let-item="item">
+                <GridLayout columns="auto, *">
+                    <GridLayout columns="auto" rows="auto" class="favourite-wrap"
+                        (tap)="toggleFavorite(item)">
+                        <Image id="imgFav" stretch="none" class="icon-image" src="{{ item.favorite ? 'res://ic_add_to_fav_1' : 'res://ic_add_to_fav'}}">
+                        </Image>
+                    </GridLayout>
+                    <StackLayout col="1">
+                        <Label [text]="item.title" textWrap="true"
+                        class="info-bigger"></Label>
+                        <Label [text]="item.room"
+                        class="info-orange"></Label>
+                    </StackLayout>
+
+                </GridLayout>
+                
+            </ng-template>
+        </ListView>
+    </GridLayout>
+</GridLayout>

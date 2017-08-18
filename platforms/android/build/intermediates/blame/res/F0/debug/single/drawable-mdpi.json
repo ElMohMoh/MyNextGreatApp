@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-mdpi\\logo.png",
+        "source": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\src\\main\\res\\drawable-mdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-mdpi\\ic_add_to_fav.png",
+        "source": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\src\\main\\res\\drawable-mdpi\\ic_add_to_fav.png"
+    },
+    {
+        "merged": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-mdpi\\background.png",
+        "source": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\src\\main\\res\\drawable-mdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-mdpi\\icon.png",
+        "source": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-mdpi\\ic_add_to_fav_1.png",
+        "source": "C:\\Users\\Chaieb Mohamed\\visualStudioWorkspace\\MyNextGreatApp\\platforms\\android\\src\\main\\res\\drawable-mdpi\\ic_add_to_fav_1.png"
+    }
+]

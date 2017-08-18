@@ -1,0 +1,30 @@
+<GridLayout rows="auto, *">
+
+    <StackLayout class="page-header" row="0">
+        <Label text="Header" class="page-title bold"
+             horizontalAlignment="center"
+              margin="15">
+        </Label>
+    </StackLayout>
+    
+    <GridLayout rows="*" row="1">
+        <ListView [items]="myItems">
+            <template let-item="item">
+                <GridLayout columns="auto, *">
+                    <GridLayout columns="auto" rows="auto">
+                        <Image id="imgFav" stretch="none" class="icon-image" src="res://icon">
+                        </Image>
+                    </GridLayout>
+                    <StackLayout col="1">
+                        <Label [text]="item.title" textWrap="true"
+                        class="info-bigger"></Label>
+                        <Label [text]="item.room"
+                        class="info-orange"></Label>
+                    </StackLayout>
+
+                </GridLayout>
+                
+            </template>
+        </ListView>
+    </GridLayout>
+</GridLayout>
