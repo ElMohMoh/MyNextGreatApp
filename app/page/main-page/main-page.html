@@ -1,9 +1,11 @@
 <GridLayout rows="auto, *">
 
     <StackLayout class="page-header" row="0">
-        <Label text="Header" class="page-title bold"
-             horizontalAlignment="center"
-              margin="15">
+        <GridLayout class="darker">
+            <SegmentedBar selectedBackgroundColor="#fac950" [items]="confDayOptions" [selectedIndex]="selectedIndex" (selectedIndexChange)="onSelectedIndexChange($event)">
+            </SegmentedBar>
+        </GridLayout>
+        <Label [text]="dayHeader" class="page-title bold" horizontalAlignment="center" margin="15">
         </Label>
     </StackLayout>
     

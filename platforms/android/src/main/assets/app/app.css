@@ -11,6 +11,11 @@ refer to http://docs.nativescript.org/ui/theme.
 */
 @import 'nativescript-theme-core/css/core.light.css';
 
+SegmentedBar {
+    background-color: transparent;
+    color: white;
+}
+
 .page-header{
     background-image: url('res://background_new');
     background-size: cover;
@@ -129,4 +134,8 @@ refer to http://docs.nativescript.org/ui/theme.
 .description {
     font-size: 14;
     color: #555555;
+}
+
+.darker {
+    background-color: #55000000;
 }
